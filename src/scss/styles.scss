@@ -1,0 +1,215 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.24;
+  font-style: normal;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+nav {
+  height: 100px;
+  .navbar-toggler {
+    border: none;
+    &:hover {
+      transform: scale(1.3);
+      transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 1ms linear;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  svg {
+    color: black;
+    height: 50px;
+    width: 50px;
+  }
+}
+.offcanvas.offcanvas-end {
+  width: 70%;
+}
+
+.jumbo {
+  margin-top: 100px;
+  // min-height: 550px;
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    .col-left {
+      .img-wrapper {
+        height: 100%;
+        width: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: bottom center;
+        }
+      }
+    }
+    .col-right {
+      background-image: url(../assets/imgs/banner-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 2rem;
+      .btn-buy-now {
+        border: black solid;
+        border-radius: 0;
+        padding: 1rem 2.5rem;
+        font-weight: 600;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#strenght-points {
+  .img-wrapper {
+    width: 50%;
+  }
+}
+
+#review {
+  .rating {
+    color: gold;
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+    .review-container {
+      padding: 2rem;
+      width: 300px;
+    }
+  }
+}
+
+#products {
+  background-color: rgb(245, 245, 245);
+  padding-block: 2rem;
+  .card {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    .card-img-top {
+      border-radius: 0;
+    }
+    .card-body {
+    }
+    .rating {
+      color: gold;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #04df6c;
+    }
+  }
+}
+
+#faqs {
+  .accordion-button {
+    border-radius: 0;
+
+    &:not(.collapsed) {
+      background-color: transparent;
+      border-bottom: 1px solid gray;
+    }
+    &:not(.collapsed)::after {
+      content: "-";
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: none;
+    }
+    &::after {
+      content: "+";
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: none;
+      flex-shrink: 1;
+    }
+  }
+
+  .accordion-item {
+    border: none;
+    border-radius: 0;
+  }
+  svg {
+    height: 3rem;
+    color: #2e45cc;
+  }
+}
+
+#newsletter {
+  background-color: rgb(245, 245, 245);
+  h2 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  .text {
+    max-width: 600px;
+  }
+  svg {
+    height: 3rem;
+    color: #04df6c;
+  }
+  form {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .input-group,
+  input,
+  button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+
+  .social {
+    svg {
+      height: 3rem;
+      border: 1px solid currentColor;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbo {
+    .wrapper {
+      .col-left {
+        width: 50%;
+      }
+      .col-right {
+        width: 50%;
+      }
+    }
+  }
+}
